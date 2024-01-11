@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Trung Nguyen, xnxx, LIC=14HV2-93ISK-45QT5-GZ6M5-VJYC6-WS6QD
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\84886\Desktop\Project STM32\Swerve_Driver_F103_As5600-main\SwerveDriver\MDK-ARM\SwerveDriver.uvprojx
+Project File Date:  12/17/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'SwerveDriver'
+compiling i2c_slave.c...
+../Core/Inc/i2c_slave.h(4): warning:  #1295-D: Deprecated declaration Init_I2C_Slave - give arg types
+  void Init_I2C_Slave();
+../Core/Inc/i2c_slave.h(5): warning:  #1295-D: Deprecated declaration Return_Data - give arg types
+  int16_t Return_Data();
+../Core/Inc/i2c_slave.h(6): warning:  #1295-D: Deprecated declaration Return_Connected - give arg types
+  uint8_t Return_Connected();
+../Core/Inc/i2c_slave.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif // I2C_SLAVE_H
+..\Core\Src\i2c_slave.c(58): warning:  #1-D: last line of file ends without a newline
+  }
+..\Core\Src\i2c_slave.c: 5 warnings, 0 errors
+compiling main.c...
+../Core/Inc/as5600.h(59): warning:  #1-D: last line of file ends without a newline
+  void AS5600_SetPWMFreq(uint8_t Freq);
+../Core/Inc/i2c_slave.h(4): warning:  #1295-D: Deprecated declaration Init_I2C_Slave - give arg types
+  void Init_I2C_Slave();
+../Core/Inc/i2c_slave.h(5): warning:  #1295-D: Deprecated declaration Return_Data - give arg types
+  int16_t Return_Data();
+../Core/Inc/i2c_slave.h(6): warning:  #1295-D: Deprecated declaration Return_Connected - give arg types
+  uint8_t Return_Connected();
+../Core/Inc/i2c_slave.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif // I2C_SLAVE_H
+../Core/Src/main.c(177): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+    sprintf(USART_Long_Tx_Buffer, "000,000,00000,%4.1f,%4.1f,%4.1f,%3.0f,%3.0f,0x0%1.0f", Kp, Ki, Kd, (float)Out_Max, (float)Out_Min, (float)Self_Address);
+../Core/Src/main.c(231): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *restrict"
+            sscanf(USART_Rx_Buffer, "%f,%f,%f,%f,%f,%f", &Data_To_Flash[0], &Data_To_Flash[1], &Data_To_Flash[2], &Data_To_Flash[3], &Data_To_Flash[4], &Data_To_Flash[5]);
+../Core/Src/main.c(323): warning:  #188-D: enumerated type mixed with another type
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
+../Core/Src/main.c(350): warning:  #188-D: enumerated type mixed with another type
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, 1);
+../Core/Src/main.c(351): warning:  #188-D: enumerated type mixed with another type
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, 1);
+../Core/Src/main.c(384): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+        sprintf(USART_Short_Tx_Buffer, "%3.0f,%3.0f,%2.3f", Angle_Temp, (float)TempSetpoint, (float)PIDOut);
+../Core/Src/main.c(392): warning:  #2548-D: multicharacter character literal (potential portability problem)
+          memset(USART_Short_Tx_Buffer, '/0', 14);
+../Core/Src/main.c: 12 warnings, 0 errors
+linking...
+Program Size: Code=29692 RO-data=776 RW-data=116 ZI-data=2228  
+FromELF: creating hex file...
+"SwerveDriver\SwerveDriver.axf" - 0 Error(s), 17 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_SwerveDriver
+  C:\Users\84886\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\84886\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

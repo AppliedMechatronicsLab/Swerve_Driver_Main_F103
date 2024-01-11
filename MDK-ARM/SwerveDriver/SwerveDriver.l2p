@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"swervedriver\startup_stm32f103xb.o"
+"swervedriver\main.o"
+"swervedriver\stm32f1xx_it.o"
+"swervedriver\stm32f1xx_hal_msp.o"
+"swervedriver\as5600.o"
+"swervedriver\pid.o"
+"swervedriver\i2c_slave.o"
+"swervedriver\stm32f1xx_hal_gpio_ex.o"
+"swervedriver\stm32f1xx_hal_i2c.o"
+"swervedriver\stm32f1xx_hal.o"
+"swervedriver\stm32f1xx_hal_rcc.o"
+"swervedriver\stm32f1xx_hal_rcc_ex.o"
+"swervedriver\stm32f1xx_hal_gpio.o"
+"swervedriver\stm32f1xx_hal_dma.o"
+"swervedriver\stm32f1xx_hal_cortex.o"
+"swervedriver\stm32f1xx_hal_pwr.o"
+"swervedriver\stm32f1xx_hal_flash.o"
+"swervedriver\stm32f1xx_hal_flash_ex.o"
+"swervedriver\stm32f1xx_hal_exti.o"
+"swervedriver\stm32f1xx_hal_tim.o"
+"swervedriver\stm32f1xx_hal_tim_ex.o"
+"swervedriver\stm32f1xx_hal_uart.o"
+"swervedriver\system_stm32f1xx.o"
+--strict --scatter "SwerveDriver\SwerveDriver.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "SwerveDriver.map" -o SwerveDriver\SwerveDriver.axf
